@@ -5,4 +5,6 @@
 *.fls
 *.fdb_latexmk
 *.fls
+*.gz
+*.dvi
 svg-inkscape/
