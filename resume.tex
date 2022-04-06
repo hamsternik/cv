@@ -1,80 +1,105 @@
 \documentclass{article}
-\usepackage{setspace}
-% \usepackage[cm]{fullpage}
 \usepackage{color}
+\usepackage{setspace}
 \usepackage{hyperref}
-
-\definecolor{contactgray}{gray}{0.3}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-%  Template Definitions  %
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newcommand{\name}[1]{\begin{center}\textsc{\Huge#1}\\\end{center}}
-\newcommand{\contacts}[1]{\begin{center}\color{contactgray}{\small#1}\end{center}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Start Document     %
-%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
-\name{Nikita Khomitsevych}
-\contacts{\url{hamsternik9@gmail.com} \hspace{1cm} \url{hamsterniknotes.com}}
-\contacts{\href{https://www.linkedin.com/in/khomitsevych/}{LinkedIn} \hspace{0.5cm} \href{http://github.com/hamsternik}{GitHub} \hspace{0.5cm} \href{https://stackoverflow.com/users/3527499/hamsternik}{Stack Overflow}}
+\pagenumbering{gobble}
+\definecolor{contactgray}{gray}{0.3}
+\newcommand{\contacts}[1]{
+    \begin{center}\color{contactgray}{\small#1}\end{center}
+}
 
-iOS software developer with 5+ years of engineering in plenty of complex projects and distributed software development teams.
-Worked on projects targeting both B2C market and B2B area (sometimes strictly related to the hardware manufactor).
-Have relative work experience in either of outsource / outstaff / product companies covering specific circumstances related to each of them.
-Although the main area I been worked is iOS development I am working with bunch of technologies and tools for years and basically describe myself as \href{https://alexkondov.com/the-t-shaped-engineer/}{T-Shaped Engineer}.
+%%%%%%%%%%%%%%%%%%%%%%%% RESUME TEXT %%%%%%%%%%%%%%%%%%%%%%%%
 
-Recent Employments % bold, header outline
+\begin{center}
+    \textsc{\huge{Nikita Khomitsevych}}
+\end{center}
 
-\href{https://www.life360.com}{Life360 Inc.}, 2020/01–2022/04. % bold, underlined, same font/size as plain text
+\vspace{-10px}
 
-Senior iOS Engineer (Contractor). 
-Worked on major product parts of the Life360 iOS application (30+ million MAU, end of the Q1 2022).
-Developed Family Safety Assist (FSA) feature allowing to access e.g. roadside assistance in US and Canada. 
-Developed Lead Generation feature to provide specific offers for customers from auto insurance companies. 
-Leaded a team at 4 mobile developers (Android and iOS), tackling requirements processing, delivery responsibilities and people management.
-Developed user's driving experience workflow, created brand new tab ‘Driving’ including weekly driver report to see driving statistics and promote safe driving.
+\contacts{
+    \url{hamsternik9@gmail.com} \hspace{1cm} \url{hamsterniknotes.com}
+}
+
+\vspace{-12px}
+
+\contacts{
+    \href{https://www.linkedin.com/in/khomitsevych/}{LinkedIn} \hspace{0.5cm} 
+    \href{http://github.com/hamsternik}{GitHub} \hspace{0.5cm} 
+    \href{https://stackoverflow.com/users/3527499/hamsternik}{Stack Overflow}
+}
+
+\vspace*{8px}
+
+\noindent iOS software developer with 5+ years of engineering in plenty of complex projects and distributed 
+software development teams. Worked on projects targeting both B2C market and B2B area (sometimes strictly 
+related to the hardware manufactor). Have relative work experience in either of outsource / outstaff / product 
+companies covering specific circumstances related to each of them. Although the main area I been worked is 
+iOS development I am working with bunch of technologies and tools for years and basically describe myself 
+as \href{https://alexkondov.com/the-t-shaped-engineer/}{T-Shaped Engineer}.
+
+%%%%%%%%%%% Recent Employments section
+
+\subsection*{Recent Employments}
+
+\noindent \textbf{\href{https://www.life360.com}{Life360 Inc.}}, 2020/01--2022/04. 
+Senior iOS Engineer (Contractor).\newline
+Worked on major product parts of the Life360 iOS application 
+(30+ million MAU, end of the Q1 2022). Developed Family Safety Assist (FSA) feature allowing to access 
+e.g. roadside assistance in US and Canada. Developed Lead Generation feature to provide specific offers 
+for customers from auto insurance companies. Leaded a team at 4 mobile developers (Android and iOS), 
+tackling requirements processing, delivery responsibilities and people management. Developed user's 
+driving experience workflow, created brand new tab ‘Driving’ including weekly driver report 
+to see driving statistics and promote safe driving.\newline
 Technologies included Swift, UIKit, RxSwift, Uber RIBs, XCTests, Fastlane etc.
 
-\href{https://betterme.world/about}{BetterMe USA}, 2018/11–2019/12. % bold, underlined, same font/size as plain text
+\vspace*{8px}
 
-iOS Software Engineer (Full-time). 
-Developed a number of fast-growing Health \& Fitness apps in the world, aimed to improve people’s fitness level and general health status. 
-Developed and supported \href{https://www.raywenderlich.com/books/advanced-ios-app-architecture/v3.0/chapters/6-architecture-redux}{Redux architecture} on most of our apps. 
-Developed brand new version of 'BetterMe: Weight Loss Workouts' iOS application getting away from VIPER to the Redux.
-Supported custom Jenkins pipeline as mandatory CI/CD delivery platform. 
+\noindent \textbf{\href{https://betterme.world/about}{BetterMe USA}}, 2018/11--2019/12. 
+iOS Software Engineer (Full-time).\newline
+Developed a number of fast-growing Health \& Fitness apps in the world, 
+aimed to improve people’s fitness level and general health status. Developed and supported 
+\href{https://www.raywenderlich.com/books/advanced-ios-app-architecture/v3.0/chapters/6-architecture-redux}{Redux architecture} 
+on most of our apps. Developed brand new version of 'BetterMe: Weight Loss Workouts' iOS application 
+getting away from VIPER to the Redux. Supported custom Jenkins pipeline as mandatory CI/CD delivery platform. 
 Developed bunch of Ruby scripts using Fastlane as a primary tool for a daily work tasks automatization.
-Top-3 applications with my contribution: \href{https://apps.apple.com/us/app/betterme-weight-loss-workouts/id1264546236}{BetterMe: Weight Loss Workouts}, \href{https://apps.apple.com/us/app/betterme-calm-sleep-meditate/id1363010081}{BetterMe: Calm, Sleep, Meditate}, \href{https://apps.apple.com/us/app/betterme-walking-weightloss/id1434400695}{BetterMe: Walking \& Weightloss}
+Top-3 applications with my contribution: 
+\href{https://apps.apple.com/us/app/betterme-weight-loss-workouts/id1264546236}{BetterMe: Weight Loss Workouts}, 
+\href{https://apps.apple.com/us/app/betterme-calm-sleep-meditate/id1363010081}{BetterMe: Calm, Sleep, Meditate}, 
+\href{https://apps.apple.com/us/app/betterme-walking-weightloss/id1434400695}{BetterMe: Walking \& Weightloss}
 
-\href{https://www.cybervisiontech.com}{CyberVision, Inc.}, 2016/04–2018/09
+\vspace*{8px}
 
-Mobile Software Engineer (Full-time), 2017/06–2018/09.
-Worked on iOS applications for \href{https://www.nuvocares.com/solutions}{Nuvo: iOS application for customers and doctors}, manufactored FDA cleared device for remote nonstress tests for pregnant.
-iOS application was intended to monitor real-time health indicators of a pregnant woman and her fetus.
+\noindent \textbf{\href{https://www.cybervisiontech.com}{CyberVision, Inc.}}, 2016/04–2018/09.
+\newline Mobile Software Engineer (Full-time). Project: \href{https://www.nuvocares.com/solutions}{Nuvo: applications for pregnant and doctor}.
+\newline Worked on iOS applications for manufactored FDA cleared device for remote nonstress tests for pregnant. 
+iOS application was intended to monitor real-time health indicators of a pregnant woman and her fetus. 
 Developed both applications for pregnant and doctor on iPhone and iPad.
 Architectured and developed a separated SDK to deal with device via Bluetooth Classic.
 Supported FDA and MFi device certification from engineering side.
-Technologies included Swift, UIKit, CoreGraphics, SwftCharts, VIPER architecture, Bluetooth Classic, Alamofire, RxSwift, Swinject.
-Used Nimble, Quick and Cuckoo tools leaning on BDD approach.
+\newline Technologies included Swift, UIKit, CoreGraphics, SwftCharts, VIPER architecture, 
+Bluetooth Classic, Alamofire, RxSwift, Swinject. Used Nimble, Quick and Cuckoo tools leaning on BDD approach.
 
-iOS Software Engineer (Full-time), 2016/04–2017/05. 
-Worked on \href{https://apps.apple.com/us/app/cleanspace-air-pollution-app/id987959047}{CleanSpace application} iOS SDK. 
-Provided a full cycle of application development, inclduing architecture planning, development cycle and end-to-end testing.
+\noindent \newline iOS Software Engineer (Full-time). Project: \href{https://www.sensynehealth.com/cleanspace}{CleanSpace application}.
+\newline Worked on iOS SDK for CleanSpace application. 
+Provided a full cycle of application development, inclduing architecture planning, 
+development cycle and end-to-end testing.
 Developed third-party frameworks from scratch for next integration on the iOS application.
 Created Objective-C library that enables communication with BLE peripheral.
 Created Swift library implemented iBeacon communication workflow. 
-Technologies included Swift, UIKit, Autolayout, CoreGraphics, CoreBluetooth, CoreLocation, Alamofire, PromiseKit.
+\newline Technologies included Swift, UIKit, Autolayout, CoreGraphics, CoreBluetooth, CoreLocation, Alamofire, PromiseKit.
 
-Education % bold, header outline
+%%%%%%%%%%% Education section
 
-Master's Degree in Computer Science, 2017–2018.
-\href{https://kpi.ua/en}{Igor Sikorsky Kyiv Polytechnic Institute (KPI)}, Faculty of Biomedical Engineering.
+\subsection*{Education}
 
-Bachelor's Degree in Computer Science, 2013–2017.
-\href{https://kpi.ua/en}{Igor Sikorsky Kyiv Polytechnic Institute (KPI)}, Faculty of Biomedical Engineering.
+\begin{samepage}
+Master's Degree in Computer Science, 2017--2018.
+\newline \href{https://kpi.ua/en}{Igor Sikorsky Kyiv Polytechnic Institute (KPI)}, Faculty of Biomedical Engineering.
+\\[8px] Bachelor's Degree in Computer Science, 2013--2017.
+\newline \href{https://kpi.ua/en}{Igor Sikorsky Kyiv Polytechnic Institute (KPI)}, Faculty of Biomedical Engineering.
+\end{samepage}
 
 \end{document}
