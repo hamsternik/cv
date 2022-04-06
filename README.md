@@ -1,7 +1,10 @@
-#### CV of Homitsevich Nikita 
+Resume is built with LaTeX, software system for document preparation, to have an eye candy .pdf document as output.
 
-On me Debian *wheezy* was installed solely two packages: **texlive-latex-base** && **tex-gyre**. Also, if you first use TeX and LaTeX, i recommended install **texlive-full** package. It's easier and you wouldn't think about any packages, maybee, in first time.
+To build up first download the repo and use `make`.
+There is no any specific packages need to pre-download before the build.
 
-*Involve this packages, nothing else was need to compile it into pdf cleanly.*
+## References to Dive
 
-p.s. it my first real work with TeX, including and especially with Latex. So, don't take an example from me :)
+- [Using Latexmk. How to build up simple .tex document](https://mg.readthedocs.io/latexmk.html)
+- [LaTeX help 1.1. Documentation](http://www.emerson.emory.edu/services/latex/latex_toc.html)
+- [Yegor Bugaenko resume](https://github.com/yegor256/blog/blob/master/_latex/resume-boring.tex)
