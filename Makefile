@@ -1,11 +1,20 @@
-TEXS=$(wildcard *.tex)
-PDFS=$(TEXS:.tex=.pdf)
+LATEX := pdflatex
+LATEXFLAGS := --shell-escape --file-line-error
+LATEXMK := latexmk
+LATEXMKFLAGS := -quiet -recorder -use-make -pdf
+
+# `wildcard` build-in function replaced by a space-separated list of names of existing files that match one of the given file name patterns
+TEXS := $(wildcard *.tex) 
+PDFS := $(TEXS:.tex=.pdf)
 
 all: $(PDFS)
 
-%.pdf: %.tex
-	latexmk -pdf $<
+%.pdf: %.tex nkresume.cls
+	$(LATEXMK) $(LATEXMKFLAGS) -pdflatex="$(LATEX) $(LATEXFLAGS)"
 
 clean:
-	rm -rf .DS_Store *.aux *.bbl *.bcf *.blg *.fdb_latexmk *.fls *.log *.run.xml *.out *.gz *.dvi
-	rm -rf $(PDFS)
+	$(LATEXMK) -quiet -c
+
+cleanall: clean; rm resume.pdf
+
+update: clean all
