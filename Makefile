@@ -9,7 +9,7 @@ PDFS := $(TEXS:.tex=.pdf)
 
 all: $(PDFS)
 
-%.pdf: %.tex nkresume.cls
+%.pdf: %.tex nk-resume.cls
 	$(LATEXMK) $(LATEXMKFLAGS) -pdflatex="$(LATEX) $(LATEXFLAGS)"
 
 clean:
