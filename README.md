@@ -8,3 +8,7 @@ There is no any specific packages need to pre-download before the build.
 - [Using Latexmk. How to build up simple .tex document](https://mg.readthedocs.io/latexmk.html)
 - [LaTeX help 1.1. Documentation](http://www.emerson.emory.edu/services/latex/latex_toc.html)
 - [Yegor Bugaenko resume](https://github.com/yegor256/blog/blob/master/_latex/resume-boring.tex)
+
+## Resume Landing
+
+![](img/1.0.0.png)
