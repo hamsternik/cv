@@ -4,8 +4,11 @@ LATEXMK := latexmk
 LATEXMKFLAGS := -quiet -recorder -use-make -pdf
 
 # `wildcard` build-in function replaced by a space-separated list of names of existing files that match one of the given file name patterns
-TEXS := $(wildcard *.tex) 
+TEXS := $(wildcard *.tex)
 PDFS := $(TEXS:.tex=.pdf)
+
+help:
+	@cat Makefile
 
 all: $(PDFS)
 
