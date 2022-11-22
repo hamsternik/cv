@@ -2,7 +2,7 @@
 
 Resume is built with LaTeX, software system for document preparation, to have an eye candy .pdf document as output.
 
-![](img/1.0.0.png)
+![](img/1.2.0.png)
 
 ## Deploy
 
