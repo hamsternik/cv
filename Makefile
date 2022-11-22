@@ -10,6 +10,10 @@ PDFS := $(TEXS:.tex=.pdf)
 help:
 	@cat Makefile
 
+install:
+	sudo tlmgr install latexmk xcolor pgf textpos fancyhdr ulem hyperref geometry setspace hyperref
+# pgf – Create PostScript and PDF graphics in TEX. It comes with a user-friendly syntax layer called TikZ.
+
 all: $(PDFS)
 
 %.pdf: %.tex nk-resume.cls
