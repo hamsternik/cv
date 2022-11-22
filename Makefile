@@ -1,3 +1,4 @@
+VERSION := 1.1.0
 LATEX := pdflatex
 LATEXFLAGS := --shell-escape --file-line-error
 LATEXMK := latexmk
@@ -10,9 +11,11 @@ PDFS := $(TEXS:.tex=.pdf)
 help:
 	@cat Makefile
 
+version:
+	@echo "resume version $(VERSION)"
+
 install:
 	sudo tlmgr install latexmk xcolor pgf textpos fancyhdr ulem hyperref geometry setspace hyperref
-# pgf – Create PostScript and PDF graphics in TEX. It comes with a user-friendly syntax layer called TikZ.
 
 all: $(PDFS)
 
@@ -24,4 +27,4 @@ clean:
 
 cleanall: clean; rm resume.pdf
 
-update: clean all
+update: clean all version
