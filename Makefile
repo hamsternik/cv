@@ -1,4 +1,4 @@
-VERSION := 1.2.0
+VERSION := 1.2.1
 LATEX := pdflatex
 LATEXFLAGS := --shell-escape --file-line-error
 LATEXMK := latexmk
