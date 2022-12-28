@@ -39,3 +39,14 @@ make all
 - [LaTeX help 1.1. Documentation](http://www.emerson.emory.edu/services/latex/latex_toc.html)
 - [Yegor Bugaenko resume](https://github.com/yegor256/blog/blob/master/_latex/resume-boring.tex)
 - [Firing up LaTex on macOS 🔥](https://gist.github.com/LucaCappelletti94/920186303d71c85e66e76ff989ea6b62)
+
+## Misc
+
+[RESUME and COVER LETTERS. Harvard Extension School](https://hwpi.harvard.edu/files/ocs/files/hes-resume-cover-letter-guide.pdf)
+
+Tips:
+
+- create a strong resume
+- use action verbs for your resume
+- write an effective cover letter
+- check out sample resumes in th PDF
