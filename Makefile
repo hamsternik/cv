@@ -20,9 +20,6 @@ help:
 version:
 	@echo "resume version $(VERSION)"
 
-install:
-	sudo tlmgr install latexmk xcolor pgf textpos fancyhdr ulem hyperref geometry setspace hyperref
-
 build: $(PDFS)
 
 %.pdf: %.tex nk-resume.cls
@@ -32,3 +29,17 @@ clean:
 	$(LATEXMK) $(LATEXMK_FLAGS) $(LATEXMK_FLAGS_CLEAN)
 
 update: clean build version
+
+install:
+	sudo tlmgr install \
+	latexmk \
+	xcolor \
+	pgf \
+	textpos \
+	fancyhdr \
+	ulem \
+	hyperref \
+	geometry \
+	setspace \
+	hyperref \
+	lacheck # a tool for finding common mistakes in LATEX documents
