@@ -4,7 +4,23 @@ Resume is built with LaTeX, software system for document preparation, to have an
 
 ![](img/1.2.0.png)
 
-## Deploy
+## Prerequisites
+
+`latex` has to be already installed on your machine, otherwise you will not be able to build the project. I am using macOS (guess you either).
+
+The best way to install `latex` within `tlmgr` and other required tools is [to download MacTeX](https://tug.org/mactex/mactex-download.html) distribution. I prefer [the BasicTeX](https://tug.org/mactex/morepackages.html) instead, as the off. documentation says:
+
+> BasicTeX is a much smaller alternate TeX Distribution for users who do not want to download the full TeX Live, or have unreliable internet connections. It contains all of the standard tools needed to write TeX documents, including TeX, LaTeX, pdfTeX, MetaFont, dvips, MetaPost, and XeTeX. BasicTeX does not overwrite the full distribution; it is installed in /usr/local/texlive/2023basic
+
+### Troubleshooting
+
+If you have the issue `tlmgr: action not allowed in system mode: update` and use Brew, please follow the Prerequisites section an official distribution supported by the tug.org group directly.
+
+Unfortunately, available distributions on the brew.sh are not working properly (UPD: macOS Sonoma 14.0), `tlmgr` does not allow to use any write op., eg. `install` or `update --self`. My guess a Brew distribution has issues with setting the right PATH variables. I found [the answer](https://tex.stackexchange.com/a/634438) for this issue, but in order to resolve the issue I need to fix up tlmgr config file.
+
+Official BasicTeX (from the tug.org) does not have any of these problems. If you want to dive into installation details of the distribution, check out eg. [6. Configuring PATH and MANPATH](https://www.tug.org/mactex/BasicTeX.pdf) section.
+
+## Build
 
 First, install all third-party packages used in the project.
 
