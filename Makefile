@@ -21,6 +21,9 @@ help:
 version:
 	@echo "resume version $(VERSION)"
 
+install:
+	sudo tlmgr install `head -1 requirements.txt`
+
 %.pdf: %.tex nk-resume.cls
 	$(LATEXMK) $(LATEXMK_FLAGS) $(LATEXMK_FLAGS_BUILD) -pdflatex="$(LATEX) $(LATEX_FLAGS)"
 
@@ -33,17 +36,3 @@ update: clean build version
 
 lacheck:
 	@lacheck *.tex
-
-install:
-	sudo tlmgr install \
-	latexmk \
-	xcolor \
-	pgf \
-	textpos \
-	fancyhdr \
-	ulem \
-	hyperref \
-	geometry \
-	setspace \
-	hyperref \
-	lacheck # a tool for finding common mistakes in LATEX documents

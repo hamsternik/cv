@@ -1,0 +1,9 @@
+latexmk chktex lacheck xcolor geometry pgf textpos fancyhdr ulem hyperref setspace hyperref
+
+# This file is workaround to install packages with the `tlmgr`. 
+# Check out the StackOverflow answer descibing a potential issues using this way:
+# https://tex.stackexchange.com/q/528069
+
+# latexmk: automates the process of generating a LATEX document
+# chktex: reports typographic and other errors in LATEX documents
+# lacheck: a tool for finding common mistakes in LATEX documents
