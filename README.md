@@ -49,6 +49,12 @@ make all
 
 > pgf – Create PostScript and PDF graphics in TEX. It comes with a user-friendly syntax layer called TikZ.
 
+### Structure
+
+Custom design for my CV defined in the nk-resume.cls _"class"_ file.
+
+For more details about supplementary files check out [What are .cls and .sty files? How are they different?](https://tug.org/pracjourn/2005-3/asknelly/nelly-sty-&-cls.pdf)
+
 ## References
 
 - [Using Latexmk. How to build up simple .tex document](https://mg.readthedocs.io/latexmk.html)
