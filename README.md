@@ -1,8 +1,30 @@
-# @hamsternik resume
+<img src="img/1.2.0.png" width="640">
 
-Resume is built with LaTeX, software system for document preparation, to have an eye candy .pdf document as output.
+Install packages necessary to compile the .tex files:
 
-![](img/1.2.0.png)
+```bash
+make install
+```
+
+To compile the cv in PDF format just run:
+
+```sh
+make build
+```
+
+`build` command works based on the `latexmk` tool, which will not recompile .tex files if nothing has changed. 
+
+To recompile everything from scratch, do:
+
+```sh
+make update
+```
+
+To clean everything up, do:
+
+```sh
+make clean
+```
 
 ## Prerequisites
 
@@ -20,36 +42,7 @@ Unfortunately, available distributions on the brew.sh are not working properly (
 
 Official BasicTeX (from the tug.org) does not have any of these problems. If you want to dive into installation details of the distribution, check out eg. [6. Configuring PATH and MANPATH](https://www.tug.org/mactex/BasicTeX.pdf) section.
 
-## Build
-
-First, install all third-party packages used in the project.
-
-```bash
-make install
-```
-
-When `make` completes to install packages, run the command to build up resume in `.pdf` format.
-
-```bash
-make all
-```
-
-### Packages
-
-- latexmk
-- xcolor
-- pgf
-- textpos
-- fancyhdr
-- ulem
-- hyperref
-- geometry
-- setspace
-- hyperref
-
-> pgf – Create PostScript and PDF graphics in TEX. It comes with a user-friendly syntax layer called TikZ.
-
-### Structure
+### Code Structure
 
 Custom design for my CV defined in the nk-resume.cls _"class"_ file.
 
@@ -61,14 +54,3 @@ For more details about supplementary files check out [What are .cls and .sty fil
 - [LaTeX help 1.1. Documentation](http://www.emerson.emory.edu/services/latex/latex_toc.html)
 - [Yegor Bugaenko resume](https://github.com/yegor256/blog/blob/master/_latex/resume-boring.tex)
 - [Firing up LaTex on macOS 🔥](https://gist.github.com/LucaCappelletti94/920186303d71c85e66e76ff989ea6b62)
-
-## Misc
-
-[RESUME and COVER LETTERS. Harvard Extension School](https://hwpi.harvard.edu/files/ocs/files/hes-resume-cover-letter-guide.pdf)
-
-Tips:
-
-- create a strong resume
-- use action verbs for your resume
-- write an effective cover letter
-- check out sample resumes in th PDF
