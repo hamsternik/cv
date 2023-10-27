@@ -1,6 +1,7 @@
-VERSION := 1.2.1
-
 .SHELLFLAGS = -e -o pipefail -c
+
+VERSION := 1.2.1
+TEX_FILENAME := resume
 
 LATEX := pdflatex
 LATEX_FLAGS := --shell-escape --file-line-error
@@ -20,15 +21,18 @@ help:
 version:
 	@echo "resume version $(VERSION)"
 
-build: $(PDFS)
-
 %.pdf: %.tex nk-resume.cls
 	$(LATEXMK) $(LATEXMK_FLAGS) $(LATEXMK_FLAGS_BUILD) -pdflatex="$(LATEX) $(LATEX_FLAGS)"
+
+build: $(PDFS)
 
 clean:
 	$(LATEXMK) $(LATEXMK_FLAGS) $(LATEXMK_FLAGS_CLEAN)
 
 update: clean build version
+
+lacheck:
+	@lacheck *.tex
 
 install:
 	sudo tlmgr install \
