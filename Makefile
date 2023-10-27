@@ -1,8 +1,14 @@
 VERSION := 1.2.1
+
+.SHELLFLAGS = -e -o pipefail -c
+
 LATEX := pdflatex
-LATEXFLAGS := --shell-escape --file-line-error
+LATEX_FLAGS := --shell-escape --file-line-error
+
 LATEXMK := latexmk
-LATEXMKFLAGS := -quiet -recorder -use-make -pdf
+LATEXMK_FLAGS := -quiet -output-directory="build"
+LATEXMK_FLAGS_BUILD := -recorder -use-make -pdf
+LATEXMK_FLAGS_CLEAN := -C # to clean all without pdf output use `-c` instead
 
 # `wildcard` build-in function replaced by a space-separated list of names of existing files that match one of the given file name patterns
 TEXS := $(wildcard *.tex)
@@ -17,14 +23,12 @@ version:
 install:
 	sudo tlmgr install latexmk xcolor pgf textpos fancyhdr ulem hyperref geometry setspace hyperref
 
-all: $(PDFS)
+build: $(PDFS)
 
 %.pdf: %.tex nk-resume.cls
-	$(LATEXMK) $(LATEXMKFLAGS) -pdflatex="$(LATEX) $(LATEXFLAGS)"
+	$(LATEXMK) $(LATEXMK_FLAGS) $(LATEXMK_FLAGS_BUILD) -pdflatex="$(LATEX) $(LATEX_FLAGS)"
 
 clean:
-	$(LATEXMK) -quiet -c
+	$(LATEXMK) $(LATEXMK_FLAGS) $(LATEXMK_FLAGS_CLEAN)
 
-cleanall: clean; rm resume.pdf
-
-update: clean all version
+update: clean build version
