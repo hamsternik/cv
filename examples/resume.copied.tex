@@ -1,0 +1,382 @@
+%-------------------------
+% Resume in Latex
+% Author : Spiros Vathis
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{fontawesome}
+\input{glyphtounicode}
+\usepackage{lipsum}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+\hyphenation{of-ten}
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+%\newcommand{\xLarge}{\@setfontsize\xLarge\@xviipt{22}}
+\newcommand{\fancyhref}[1]{\color{blue}\underline{#1}}
+\newcommand{\resumeUnlabeledItem}[1]{\item{{#1 \vspace{-2.5pt}}}}
+
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\Huge Spiros Vathis}} & {\faEnvelope} : \href{mailto:spiros.vathis@gmail.com}{spiros.vathis@gmail.com}\\
+   & \faMobile  : +30 694 4332973 \\
+   & \faGithub:  \href{https://github.com/sVathis}{github.com/sVathis}\\
+   & \faLinkedin: \href{https://www.linkedin.com/in/vathis}{linkedin.com/in/vathis}
+\end{tabular*}
+
+\section{Professional Profile}
+{I am an experienced software engineer with strong professional background in design and implementation of high performance, data-intensive, real-time applications. With more than 20 years of technical  (e.g. high performance system programming on Solaris \& FreeBSD, performance tuning and optimization of legacy Java based systems to OpenGL programming in Windows) and leadership roles experience in both big-tech companies and startups. Additionally, my mathematical background (I hold a B.Sc. in mathematics) provides me the analytical thinking skills required in acute problem solving situations.}
+
+
+%-----------EXPERIENCE-----------------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+    {mismatch.ai}{Patras, Greece}
+    {Principal Software Engineer}{Mar 2022 - July 2023}
+    \newline \\I was involved in the design and implementation of a fully automated live streaming service for basketball games running on Amazon AWS. This gave me the opportunity to expose myself on modern AWS related technology stacks.\\
+    Here is a list of my key contributions per component:
+    \resumeItemListStart
+      \resumeItem{Livestream orchestrator}
+        {I lead the design and development of the orchestrator service running on Amazon AWS, including a REST API that exposes orchestrator's functionality to external system services.\\
+        The service orchestrates and manages realtime live streaming services for basketball games using the following tools and technologies:\\
+        • Containerized Python development\\
+        • Design and development\\
+        • Deployment on Kubernetes cluster running on Amazon EKS\\
+        • Management of container deployments using Kubernetes API\\
+        • Creation and management of container images stored on Amazon ECR\\
+        }
+      \resumeItem{Streamer}
+        {I contributed in the development (C++) of the core components that visualize game statistics, collected throughout the game, using technologies such as OpenCV and Matplotlib. This component is containerized and deployed dynamically on Amazon EKS Kubernetes cluster via the Kubernetes API.
+        }
+    \resumeItemListEnd
+
+
+    \resumeSubheading
+      {Citrix Inc.}{Patras, Greece}
+      {Principal Software Engineer}{Mar 2018 - Nov 2021}
+      \newline \\Led multicultural teams in delivering features in various products and services. In parallel contributed in growing these teams by mentoring team members, delivering trainings in "brown-bag" sessions, interviewing candidates for hire etc.
+      \resumeItemListStart
+      \resumeItem{Citrix SDWAN Edge Security}
+          {Team leader for \href{https://docs.citrix.com/en-us/tech-zone/learn/tech-briefs/citrix-sdwan-edge-security.html}{\fancyhref{Citrix SD-WAN Edge Security}}, a feature that provides Intrusion Detection, Web Filtering, and Anti-Malware natively in On-premises appliances for enterprises that use Citrix SD-WAN product.\\
+          Role responsibilities were, among other, leading a team of 10 engineers, feature design, performance analysis and optimization \\newline \\
+%          \begin{multicols}{1}
+%            \emph{Responsibilities}\\
+%            • Leading a team of 10 engineers\\
+%            • Feature design\\
+%            • Performance analysis and optimization\\
+%            \vfill\null
+%            \columnbreak
+%            \emph{Achievements}\\
+%            • TODO: Find valued achievements and contributions  \\
+%            • TODO: Some more achievements and more
+%          \end{multicols}
+          }
+        \resumeItem{Citrix ADC Hybrid Multicloud}
+          {Team leader for Azure tags for \href{https://docs.citrix.com/en-us/citrix-adc/current-release/deploying-vpx/deploy-vpx-on-azure/tags.html}{\fancyhref{Citrix ADC VPX}}, a feature that manages Azure hosted Citrix ADC load balancing service groups associated with an Azure tag.
+          \begin{multicols}{2}
+            \emph{Responsibilities}\\
+            • Leading a team of 4 engineers\\
+            • Feature design \& implementation using Azure SDK for Python utilizing several Azure APIs\\
+            • Integration with the existing Citrix ADC framework.\\
+            \vfill\null
+            \columnbreak
+            \emph{Achievements}\\
+            This was a relatively low key project in terms of customer impact but it gave me two big opportunities:\\
+            • to learn Python at the age of 45 and use it to deliver a production quality software\\
+            • to learn and start using several Azure services and APIs (e.g. Azure Resource Manager REST API, Azure Resource Graph REST API, Azure Functions etc.)\\
+          \end{multicols}
+          }
+      \resumeItemListEnd
+      \resumeSubSubheading
+      {Staff Software Engineer}{July 2012 - Mar 2018}
+      \newline \\ As a Staff Software Engineer I was leading teams in delivering features in various products and services.
+      \resumeItemListStart
+      \resumeItem{Citrix ADC Video Optimization}
+      {Team leader in \href{https://docs.citrix.com/en-us/citrix-adc/current-release/citrix-adc-support-for-telecom-service-providers/citrix-adc-Video-Optimization/getting-started.html}{\fancyhref{Citrix ADC Video Optimization}} feature for mobile operators.
+      \begin{multicols}{2}
+        \emph{Responsibilities}\\
+        • Leading a team of 4~6 engineers, providing mentoring and technical oversight\\
+        • Feature design and key implementation (using C on FreeBSD platform)\\
+        • Support of field teams (product demos, TOIs, triaging issues, assisting CS teams)\\
+        \vfill\null
+        \columnbreak
+        \emph{Achievements}\\
+        • Feature was licensed to mobile operators across the globe (O2 UK, EE UK, Telefónica Spain) resulting 25\% increase in hours of video and 20\% increase in total number of videos watched.\\
+        • Mobile operators were able to efficiently manage network resources during congestion and peak hours, improve video play consistency and reduce video stalling providing a radically improved user experience in video consumption over their networks.
+      \end{multicols}
+      }
+      \resumeItem{Skytide CDN Analytics}
+      {Team leader in performance refactoring project on a Java based legacy CDN analytics platform.
+      \begin{multicols}{2}
+        \emph{Responsibilities}\\
+        • Leading a team of 4~6 engineers\\
+        • Performance analysis using both Java and OS profiling tools.
+        \vfill\null
+        \columnbreak
+        \emph{Achievements}\\
+        • Increase of the ingestion performance from 90Krecs/sec to 500Krecs/sec and the end-to-end performance from 125Krecs/sec to 1.25Mrecs/sec
+      \end{multicols}
+      }
+
+      \resumeItem{T2100 Content Accelerator}
+      {Team leader in the development of \href{https://docs.citrix.com/en-us/citrix-adc/current-release/optimization/content-accelerator.html}{\fancyhref{Citrix T2100 content accelerator}}  used by mobile operators as content accelerator.
+      \begin{multicols}{2}
+        \emph{Responsibilities}\\
+        • Design of an S3-like REST HTTP API for caching web content and the corresponding high performance, scalable server platform.\\
+        • Implement performance critical subsystems.\\
+        • Analyze performance test results and identify major bottlenecks during performance testing\\
+        \vfill\null
+        \columnbreak
+        \emph{Achievements}\\
+        • I successfully influenced major product stakeholders (PM, upper management etc. ) into adopting modern high performance, scalable technologies (node.js, Couchbase NoSQL database) instead of legacy tech (e.g. C programming, SQL databases) that was, at time, rooted in team's culture.
+      \end{multicols}
+      }
+      \resumeItemListEnd
+
+% --------Multiple Positions Heading------------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+    \resumeSubheading
+      {Bytemobile Inc.}{Patras, Greece}
+      {Senior Software Engineer}{Apr 2008 - July 2012}
+      \resumeItemListStart
+        \resumeItem{Flash Adaptation}
+          {Head developer in the Flash Adaptation framework in the Unison platform
+          }
+        \resumeItem{Bytemobile WFM}
+          {Design \& implementation of a server side HTML content adaptation engine based on Mozilla Gecko Runtime Engine (GRE)}
+        \resumeItem{Content Adaptation Proxy}
+          {Code maintenance for the legacy high performance Content Adaptation proxy}
+      \resumeItemListEnd
+
+
+      \resumeSubheading
+      {Pi-Medical Ltd.}{Athens, Greece}
+      {Senior Software Engineer}{Dec 2001 - Mar 2008}
+      \resumeItemListStart
+        \resumeItem{Virtual Treatment Room}
+          {Design, implementation and maintenance of 3D simulation application of linear accelerators used for automatic collision detection during radiotherapy treatment\\
+%          TODO: add more info\\
+          • Design using UML methodology and tools\\
+          • C++ programming on Win32 platform\\
+          • Extensive use of OpenGL graphics library\\
+          • Administration of development support systems (source control, bug tracking, etc.)\\
+          • CE approval documentation\\
+          • Creation and adjustment of 3D models using 3D Studio \& Pro/ENGINEER CAD application
+          }
+      \resumeItemListEnd
+
+
+      \resumeSubheading
+      {Expertnet S.A.}{Patras, Greece}
+      {Software Engineer}{Apr 1997 - May 2000}
+      \resumeItemListStart
+        \resumeItem{Eudora PEM plugin}
+          {Development of cryptography plug-in for Eudora email client using Visual C++ utilizing the PEM (Privacy Enhanced Mail), S/MIME and custom security protocol based on chaotic methods
+          }
+      \resumeItemListEnd
+
+
+      \resumeSubheading
+      {University of Patras, Research Committee }{Patras, Greece}
+      {Software Engineer}{1997 - 2000}
+      \resumeItemListStart
+        \resumeItem{Various research project}
+          {Software engineer in various university related research projects
+          }
+      \resumeItemListEnd
+
+
+      \resumeSubheading
+      {Hartling Ltd. }{Athens, Greece}
+      {Software Engineer (part time)}{1994 - 1996}
+%      \resumeItemListStart
+%        \resumeUnlabeledItem{TODO: }
+%      \resumeItemListEnd
+
+      \resumeSubheading
+      {Voulgaris Publishing}{Patras, Greece}
+      {Graphics designer (part time)}{1992 - 1994}
+      \resumeItemListStart
+        \resumeUnlabeledItem{Various DTP projects using CorelDraw}
+      \resumeItemListEnd
+
+
+  \resumeSubHeadingListEnd
+
+
+\section{Academic Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {TEI of Patra, Department of Mass Media \& Informatics}{Pyrgos, Greece}
+    {Assistant Laboratory Professor}{Sept 2006 - June 2008}
+    \resumeItemListStart
+      \resumeUnlabeledItem{}{Assistant laboratory professor for freshmen course: “Introduction to computer programming using the Pascal programming language”}
+    \resumeItemListEnd
+
+    \resumeSubheading
+    {Greek Mathematics Society}{Patras, Greece}
+    {Instructor}{1999 - 2000}
+    \resumeItemListStart
+      \resumeUnlabeledItem{}{Vocational training courses on DOS, Windows and C progamming language}
+    \resumeItemListEnd
+
+
+    \resumeSubheading
+    {University of Patras, Department of Mathematics}{Patras, Greece}
+    {Assistant Laboratory Professor}{1996 - 1998}
+    \resumeItemListStart
+      \resumeUnlabeledItem{}{Laboratory assistant professor for course: “Introduction to compilers using lex \& yacc tools”}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+
+%-----------EDUCATION-----------------
+\section{Professional Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Open University of Cyprus}{Nicosia, Cyprus}
+    {Master of Science in Information Systems}{2008 -- 2011}
+  \resumeSubheading
+    {University of Patras}{Patras, Greece}
+    {Bachelor in Mathematics}{1991 - 1996}
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+%\section{Projects}
+%  \resumeSubHeadingListStart
+%    \resumeSubItem{palmnews.gr}
+%      {I created on 1999 and maintained until 2001 \href{http://web.archive.org/web/20010401151451/http://www.palmnews.gr/}{\fancyhref{http://palmnews.gr}}, the first Greek portal on Palm personal digital assistant (PDA) }
+%  \resumeSubHeadingListEnd
+
+
+\section{Patent}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {United States Patent Office}{}
+    {US9075877 - System and method for transparent in-network adaptation of rich internet applications}{Jun 29, 2012}
+    \resumeItemListStart
+      \resumeItem{Tsolis G., Zafiris P., Vathis S.}
+      {A system and method that allows Rich Internet Applications content
+      to be adapted for a web browser on a mobile device without requiring an installation of an RIA player.
+      The method comprises receiving processing a request by communicating with the web server to acquire the RIA file
+      and the parameters used to instantiate the RIA file,
+      adapting the RIA content of the RIA file for display in the web browser without requiring an RIA player at the mobile device,
+      and providing adapted RIA content to the web browser. }
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+%\cvitem{Number}{\textbf{US9075877} \href{https://patents.google.com/patent/US9075877B2/}{\faExternalLink}}
+%\cvitem{Title}{\emph{System and method for transparent in-network adaptation of rich internet applications }}
+%\cvitem{Issued}{Jun 29, 2012}
+%\cvitem{Inventors}{Tsolis Georgios, Zafiris Paraskevas, Vathis Spyridon}
+%\cvitem{Abstract}
+
+%
+%--------PROGRAMMING SKILLS------------
+%\section{Programming Skills}
+%  \resumeSubHeadingListStart
+%    \item{
+%      \textbf{Languages}{: Scala, Python, Javascript, C++, SQL, Java}
+%      \hfill
+%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
+%    }
+%  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}

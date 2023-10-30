@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{nk-resume}[2022/04/14 0.1.0 Resume Template Class]
+\ProvidesClass{hamsternik.cv}[2022/04/14 0.1.0 Resume Template Class]
 \LoadClass[12pt]{article}
 
 % Driver-independent color extensions for LATEX and pdfLATEX

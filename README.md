@@ -50,6 +50,7 @@ For more details about supplementary files check out [What are .cls and .sty fil
 
 ## References
 
+- [LATEXMK OF. MANUAL](https://mirrors.up.pt/pub/CTAN/support/latexmk/latexmk.pdf)
 - [Using Latexmk. How to build up simple .tex document](https://mg.readthedocs.io/latexmk.html)
 - [LaTeX help 1.1. Documentation](http://www.emerson.emory.edu/services/latex/latex_toc.html)
 - [Yegor Bugaenko resume](https://github.com/yegor256/blog/blob/master/_latex/resume-boring.tex)
