@@ -14,7 +14,9 @@ PDFS := $(TEXS:.tex=.pdf)
 ## Project Rules
 
 .PHONY : FORCE_MAKE
-build: $(PDFS) FORCE_MAKE
+# build: $(PDFS) FORCE_MAKE
+build: FORCE_MAKE
+	$(LATEXMK) $(LATEXMK_FLAGS) $(LATEXMK_FLAGS_BUILD) hamsternik.compact.tex
 
 %.pdf: %.tex hamsternik.cv.cls
 	@echo Compiling $* file right now...
