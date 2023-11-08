@@ -49,17 +49,17 @@
 }
 
 %% macro: name
-\newcommand{\name}[1]{
+\newcommand{\name}[1]{%
     \Huge % font size
     % \fontfamily{phv}\selectfont % font family
     % print name centered and bold
     \begin{center} \textbf{#1} \end{center}\par
     % back to normal size and font
-    \normalsize\normalfont
+    \normalsize\normalfont%
 }
 
 % macro: experience
-\newcommand{\experience}[4]{
+\newcommand{\experience}[4]{%
     % name of the work
     \noindent \textbf{#1}
     % at the right the duration
@@ -73,14 +73,19 @@
     \normalsize \par
 }
 
+% macro: project
+\newcommand{\project}[3]{%
+    \noindent \testbf{#1}
+    \hfill \text{#2} \newline
+    \text{#3} \newline
+    \normalsize \normalfont \par
+}
+
 % macro: education 
-\newcommand{\education}[4]{
+\newcommand{\education}[3]{%
     \noindent  \textbf{#1}  %% academic degree
     \hfill  \text{#2} \par  %% duration, at the right
-    \noindent \text{#3} \par %% university name, new paragraph
-    \noindent \small \text{#4} \par %% department name, new paragraph
-    % \vspace*{0.5em}
-    % \noindent\hangindent=2em\hangafter=0 \small \text{#4}
+    \noindent \text{#3} \par %% university and deparment names, new paragraph
     \normalsize \par %% back to normal size
 }
 
@@ -134,17 +139,15 @@ Participated as a staff member or contractor, primarily targeting the US market.
 
 \experience
 {Senior iOS Engineer (Contractor)}
-{2020/01--2022/04}
+{2020/01 -- 2022/04}
 {\href{https://www.life360.com}{Life360 Inc.}}
 {
-Worked on major product parts of the Life360 iOS application 
-(30+ million MAU, end of Q1 2022). Developed Family Safety Assist (FSA) feature allowing access 
-e.g. roadside assistance in US and Canada. Developed Lead Generation feature to provide specific offers 
-for customers from auto insurance companies. Led a team at 4 mobile developers (Android and iOS), 
-tackling requirements processing, delivery responsibilities and people management. Developed user's 
-driving experience workflow, created brand new tab ‘Driving’ including weekly driver report 
-to see driving statistics and promote safe driving.\newline
-Technologies included Swift, UIKit, RxSwift, Uber RIBs, XCTests, Fastlane etc.
+    Worked on major product parts of the Life360 iOS application (30+ million MAU, end of Q1 2022). 
+    Developed Family Safety Assist (FSA) feature allowing access e.g. roadside assistance in US and Canada. 
+    Developed Lead Generation feature to provide specific offers for customers from auto insurance companies. 
+    Led a team at 4 mobile developers (Android and iOS), tackling requirements processing, delivery responsibilities and people management. 
+    Developed user's driving experience workflow, created brand new tab ‘Driving’ including weekly driver report to see driving statistics and promote safe driving.
+    \newline \noindent Technologies included Swift, UIKit, RxSwift, Uber RIBs, XCTests, Fastlane etc.
 }
 
 \experience
@@ -152,16 +155,15 @@ Technologies included Swift, UIKit, RxSwift, Uber RIBs, XCTests, Fastlane etc.
 {Nov 2018 -- Dec 2019}
 {\href{https://betterme.world/about}{BetterMe USA}}
 {
-Developed a number of fast-growing Health \& Fitness apps in the world, 
-aimed to improve people’s fitness level and general health status. Developed and supported 
-\href{https://www.raywenderlich.com/books/advanced-ios-app-architecture/v3.0/chapters/6-architecture-redux}{Redux architecture} 
-on most of our apps. Developed brand new version of 'BetterMe: Weight Loss Workouts' iOS application 
-getting away from VIPER to the Redux. Supported custom Jenkins pipeline as mandatory CI/CD delivery platform. 
-Developed bunch of Ruby scripts using Fastlane as a primary tool for a daily work tasks automatization.
-\newline Top-3 applications with my contribution: 
-\href{https://apps.apple.com/us/app/betterme-weight-loss-workouts/id1264546236}{BetterMe: Weight Loss Workouts}, 
-\href{https://apps.apple.com/us/app/betterme-calm-sleep-meditate/id1363010081}{BetterMe: Calm, Sleep, Meditate}, 
-\href{https://apps.apple.com/us/app/betterme-walking-weightloss/id1434400695}{BetterMe: Walking \& Weightloss}
+    Developed a number of fast-growing Health \& Fitness apps in the world, aimed to improve people’s fitness level and general health status. 
+    Developed and supported \href{https://www.raywenderlich.com/books/advanced-ios-app-architecture/v3.0/chapters/6-architecture-redux}{Redux architecture} on most of our apps. 
+    Developed brand new version of 'BetterMe: Weight Loss Workouts' iOS application getting away from VIPER to the Redux. 
+    Supported custom Jenkins pipeline as mandatory CI/CD delivery platform. 
+    Developed bunch of Ruby scripts using Fastlane as a primary tool for a daily work tasks automatization.
+    \newline Top-3 applications with my contribution: 
+    \href{https://apps.apple.com/us/app/betterme-weight-loss-workouts/id1264546236}{BetterMe: Weight Loss Workouts}, 
+    \href{https://apps.apple.com/us/app/betterme-calm-sleep-meditate/id1363010081}{BetterMe: Calm, Sleep, Meditate}, 
+    \href{https://apps.apple.com/us/app/betterme-walking-weightloss/id1434400695}{BetterMe: Walking \& Weightloss}
 }
 
 \experience
@@ -192,13 +194,19 @@ Technologies included Swift, UIKit, Autolayout, CoreGraphics, CoreBluetooth, Cor
 
 \subsection*{Projects}
 
-[RU] \textbf{\href{https://robotdreams.cc/course/ios-razrabotka-prilozheniy-s-0}{iOS From Scratch Course}}, 2021/02--2021/05.
-\newline Lecturer and course creator (Part-time). Project: \href{https://github.com/hamsternik/robotdreams-ios-course}{GitHub course repository}.
-\newline The course contains 20 lectures and the final assessment described requirements to follow and suggested theme to implement.
-Course aims to cover multiple topics necessary for iOS developer:
-Swift basics (e.g. variables, types, functions, classes, protocols etc), iOS frameworks (UIKit, Core Animation), 
-memory management, concurrency (GCD), key-value data storage, network, development tools etc.
-\newline The goal of the course was to prepare students without computer science degree or any programming skills to the \textit{junior iOS developer} job position.
+\project
+{Online Course \textbf{\href{https://robotdreams.cc/course/ios-razrabotka-prilozheniy-s-0}{iOS From Scratch}} [RU]}
+{2021/02 -- 2021/05}
+{
+    Project: \href{https://github.com/hamsternik/robotdreams-ios-course}{GitHub course repository}.
+    Created and tought the group of 12 people. 
+    
+    The course contains 20 lectures and the final assessment described requirements to follow and suggested theme to implement.
+    Course aims to cover multiple topics necessary for iOS developer:
+    Swift basics (e.g. variables, types, functions, classes, protocols etc), iOS frameworks (UIKit, Core Animation), 
+    memory management, concurrency (GCD), key-value data storage, network, development tools etc.
+    The goal of the course was to prepare students without computer science degree or any programming skills to the \textit{junior iOS developer} job position.
+}
 
 %%%%%%%%%%% Education section
 
@@ -207,8 +215,7 @@ memory management, concurrency (GCD), key-value data storage, network, developme
 \education
 {Master's Degree in Computer Science}
 {2013--2018}
-{\href{https://kpi.ua/en}{Igor Sikorsky Kyiv Polytechnic Institute (KPI)}}
-{Biomedical Engineering Department}
+{\href{https://kpi.ua/en}{Igor Sikorsky Kyiv Polytechnic Institute}, Biomedical Engineering Department}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}work
