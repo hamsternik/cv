@@ -47,6 +47,10 @@
     \vspace*{1em}
 }
 
+\newcommand{\SubSectionSpacing}{
+    \vspace*{0.5em}
+}
+
 % macro: name
 \newcommand{\name}[1]{%
     \Huge % font size
@@ -58,7 +62,7 @@
 }
 
 % macro: experience
-\newcommand{\experience}[4]{%
+\newcommand{\Experience}[3]{%
     % name of the work
     \noindent \textbf{#1}
     % at the right the duration
@@ -67,9 +71,9 @@
     \noindent \textit{#3} \par
     % description with no hanging and in smaller text
     % \vspace*{0.5em}
-    \noindent\hangindent=2em\hangafter=0 \small #4 
+    % \noindent\hangindent=2em\hangafter=0 \small #4 
     %back to normal size
-    \normalsize \par
+    \normalsize \normalfont \par
 }
 
 % macro: Project
@@ -115,66 +119,73 @@ Participated as a staff member or contractor, primarily targeting the US market.
 
 \subsection*{Experience}
 
-\experience
+\Experience
 {Lead iOS Engineer}
 {Jan 2023 -- Present}
 {Wurthy (US platform of making P2P payments over time)}
-{
-    \begin{itemize}[label=-]
-        \setlength\itemsep{0em}
-        \item Released a brand new {\href{https://apps.apple.com/us/app/wurthy/id6446956833}{iOS application}} in a \textbf{6 months} term. Develop the app during the first \textbf{50 customers} on board.
-        \item Recruited, onboarded, and managed a \textbf{team of 3 iOS engineers}, adopting Agile and Kanban practices through the mobile iOS team.
-        \item Leaded technical aspects of the project. Split the application into multiple modules within the Domain, Service, and Application layers separation. Supported \textbf{up to 70\%} of the test coverage in the Service layer.
-        \item Developed iOS application with the \textbf{16+ iOS SDK target}, using the latest frameworks and tools, e.g. SwiftUI, async/await, and navigation stack routing.
-    \end{itemize}
-}
 
-\experience
+\begin{itemize}[label=-]
+    \setlength\itemsep{0em}
+    \item Released a brand new {\href{https://apps.apple.com/us/app/wurthy/id6446956833}{iOS application}} in a \textbf{6 months} term. Develop the app during the first \textbf{50 customers} on board.
+    \item Recruited, onboarded, and managed a \textbf{team of 3 iOS engineers}, adopting Agile and Kanban practices through the mobile iOS team.
+    \item Leaded technical aspects of the project. Split the application into multiple modules within the Domain, Service, and Application layers separation. Supported \textbf{up to 70\%} of the test coverage in the Service layer.
+    \item Developed iOS application with the \textbf{16+ iOS SDK target}, using the latest frameworks and tools, e.g. SwiftUI, async/await, and navigation stack routing.
+\end{itemize}
+
+\SubSectionSpacing
+
+\Experience
 {Software engineer (Web, macOS)}
 {Jun 2022 -- Nov 2022}
 {\href{https://www.fluxon.com/}{Fluxon}}
-{
-    \begin{itemize}[label=-]
-        \setlength\itemsep{0em}
-        \item Developed the front-end part of the \href{https://taki.app}{taki.app}. Tech stack comprises TypeScript, React, Next.js, GCP, Firebase and Firestore.
-        \item Leaded the development of the macOS application to remind about the upcoming meeting in your Google calendar, blasting upfront on your screen. Tech stack comprises Swift, SwiftUI / AppKit, Combine and XCTests.
-    \end{itemize}
-}
 
-\experience
+\begin{itemize}[label=-]
+    \setlength\itemsep{0em}
+    \item Developed the front-end part of the \href{https://taki.app}{taki.app}. Tech stack comprises TypeScript, React, Next.js, GCP, Firebase and Firestore.
+    \item Leaded the development of the macOS application to remind about the upcoming meeting in your Google calendar, blasting upfront on your screen. Tech stack comprises Swift, SwiftUI / AppKit, Combine and XCTests.
+\end{itemize}
+
+\SubSectionSpacing
+
+\Experience
 {Senior iOS Engineer (Contractor)}
 {2020/01 -- 2022/04}
 {\href{https://www.life360.com}{Life360 Inc.}}
-{
-    Worked on major product parts of the Life360 iOS application (30+ million MAU, end of Q1 2022). 
-    Developed Family Safety Assist (FSA) feature allowing access e.g. roadside assistance in US and Canada. 
-    Developed Lead Generation feature to provide specific offers for customers from auto insurance companies. 
-    Led a team at 4 mobile developers (Android and iOS), tackling requirements processing, delivery responsibilities and people management. 
-    Developed user's driving experience workflow, created brand new tab ‘Driving’ including weekly driver report to see driving statistics and promote safe driving.
-    \newline \noindent Technologies included Swift, UIKit, RxSwift, Uber RIBs, XCTests, Fastlane etc.
-}
 
-\experience
+\noindent
+Worked on major product parts of the Life360 iOS application (30+ million MAU, end of Q1 2022). 
+Developed Family Safety Assist (FSA) feature allowing access e.g. roadside assistance in US and Canada. 
+Developed Lead Generation feature to provide specific offers for customers from auto insurance companies. 
+Led a team at 4 mobile developers (Android and iOS), tackling requirements processing, delivery responsibilities and people management. 
+Developed user's driving experience workflow, created brand new tab ‘Driving’ including weekly driver report to see driving statistics and promote safe driving.
+Technologies included Swift, UIKit, RxSwift, Uber RIBs, XCTests, Fastlane etc.
+
+\SubSectionSpacing
+
+\Experience
 {iOS Software Engineer}
 {Nov 2018 -- Dec 2019}
 {\href{https://betterme.world/about}{BetterMe USA}}
-{
-    Developed a number of fast-growing Health \& Fitness apps in the world, aimed to improve people’s fitness level and general health status. 
-    Developed and supported \href{https://www.raywenderlich.com/books/advanced-ios-app-architecture/v3.0/chapters/6-architecture-redux}{Redux architecture} on most of our apps. 
-    Developed brand new version of 'BetterMe: Weight Loss Workouts' iOS application getting away from VIPER to the Redux. 
-    Supported custom Jenkins pipeline as mandatory CI/CD delivery platform. 
-    Developed bunch of Ruby scripts using Fastlane as a primary tool for a daily work tasks automatization.
-    \newline Top-3 applications with my contribution: 
-    \href{https://apps.apple.com/us/app/betterme-weight-loss-workouts/id1264546236}{BetterMe: Weight Loss Workouts}, 
-    \href{https://apps.apple.com/us/app/betterme-calm-sleep-meditate/id1363010081}{BetterMe: Calm, Sleep, Meditate}, 
-    \href{https://apps.apple.com/us/app/betterme-walking-weightloss/id1434400695}{BetterMe: Walking \& Weightloss}
-}
 
-\experience
+\noindent
+Developed a number of fast-growing Health \& Fitness apps in the world, aimed to improve people’s fitness level and general health status. 
+Developed and supported \href{https://www.raywenderlich.com/books/advanced-ios-app-architecture/v3.0/chapters/6-architecture-redux}{Redux architecture} on most of our apps. 
+Developed brand new version of 'BetterMe: Weight Loss Workouts' iOS application getting away from VIPER to the Redux. 
+Supported custom Jenkins pipeline as mandatory CI/CD delivery platform. 
+Developed bunch of Ruby scripts using Fastlane as a primary tool for a daily work tasks automatization.
+\newline Top-3 applications with my contribution: 
+\href{https://apps.apple.com/us/app/betterme-weight-loss-workouts/id1264546236}{BetterMe: Weight Loss Workouts}, 
+\href{https://apps.apple.com/us/app/betterme-calm-sleep-meditate/id1363010081}{BetterMe: Calm, Sleep, Meditate}, 
+\href{https://apps.apple.com/us/app/betterme-walking-weightloss/id1434400695}{BetterMe: Walking \& Weightloss}
+
+\SubSectionSpacing
+
+\Experience
 {iOS Software Engineer}
 {Oct 2015 -- Sep 2018}
 {\href{https://www.cybervisiontech.com}{CyberVision, Inc.}}
-{
+
+\newline \noindent
 Project: \href{https://www.nuvocares.com/solutions}{Nuvo: applications for pregnant and doctor}.
 Worked on iOS applications for manufactored FDA cleared device for remote nonstress tests for pregnant. 
 iOS application was intended to monitor real-time health indicators of a pregnant woman and her fetus. 
@@ -184,6 +195,7 @@ Supported FDA and MFi device certification from engineering side.
 Technologies included Swift, UIKit, CoreGraphics, SwftCharts, VIPER architecture, 
 Bluetooth Classic, Alamofire, RxSwift, Swinject. Used Nimble, Quick and Cuckoo tools leaning on BDD approach.
 
+\newline \noindent
 Project: \href{https://www.sensynehealth.com/cleanspace}{CleanSpace application}.
 Worked on iOS SDK for CleanSpace application. 
 Provided a full cycle of application development, inclduing architecture planning, 
@@ -192,7 +204,7 @@ Developed third-party frameworks from scratch for next integration on the iOS ap
 Created Objective-C library that enables communication with BLE peripheral.
 Created Swift library implemented iBeacon communication workflow. 
 Technologies included Swift, UIKit, Autolayout, CoreGraphics, CoreBluetooth, CoreLocation, Alamofire, PromiseKit.
-}
+
 
 %% Projects
 
