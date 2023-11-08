@@ -36,19 +36,18 @@
 
 \pagestyle{empty}
 
-%%%%%%%%%%%%%%%%% MACROS
+%%% Macros
 
 % size of the boxes used to align text
 \newlength{\spacebox}
 \settowidth{\spacebox}{123456789}
 
-%% macro: sepspace
-% vertical space separator between entries
-\newcommand{\sepspace}{
+% macro: sepspace
+\newcommand{\SectionSpacing}{ % vertical space separator between entries
     \vspace*{1em}
 }
 
-%% macro: name
+% macro: name
 \newcommand{\name}[1]{%
     \Huge % font size
     % \fontfamily{phv}\selectfont % font family
@@ -90,25 +89,29 @@
     \normalsize \par %% back to normal size
 }
 
-\begin{document}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Document
 
+\begin{document}
 
 \textsc{\huge{Nikita Khomitsevych}}
 % \name{Nikita Khomitsevych1}
 
-% \vspace*{14px}
+\SectionSpacing
 
+\noindent
 \href{mailto:hamsternik9@gmail.com}{hamsternik9@gmail.com} \text{\textbar}
 \href{https://github.com/hamsternik}{github.com/hamsternik} \text{\textbar}
 \href{https://www.linkedin.com/in/khomitsevych/}{linkedin.com/in/khomitsevych}
 
-\vspace*{14px}
+\SectionSpacing
 
-\noindent Software engineer with 8+ years of engineering (iOS and Web) in complex projects and distributed software development teams. 
+\noindent
+Software engineer with 8+ years of engineering (iOS and Web) in complex projects and distributed software development teams. 
 Have an entrepreneurship mindset working in different areas such as IoT, Healthcare, Health \& Fitness, Social, and FinTech.
 Served as mobile team lead and architect for the last 4 years.
 Participated as a staff member or contractor, primarily targeting the US market.
+
+%% Experience
 
 \subsection*{Experience}
 
@@ -191,7 +194,7 @@ Created Swift library implemented iBeacon communication workflow.
 Technologies included Swift, UIKit, Autolayout, CoreGraphics, CoreBluetooth, CoreLocation, Alamofire, PromiseKit.
 }
 
-%%%%%%%%%%% Personal projects section
+%% Projects
 
 \subsection*{Projects}
 
@@ -207,7 +210,7 @@ Swift basics (e.g. variables, types, functions, classes, protocols etc), iOS fra
 memory management, concurrency (GCD), key-value data storage, network, development tools etc.
 The goal of the course was to prepare students without computer science degree or any programming skills to the \textit{junior iOS developer} job position.
 
-%%%%%%%%%%% Education section
+%% Education
 
 \subsection*{Education}
 
@@ -216,5 +219,4 @@ The goal of the course was to prepare students without computer science degree o
 {2013--2018}
 {\href{https://kpi.ua/en}{Igor Sikorsky Kyiv Polytechnic Institute}, Biomedical Engineering Department}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}work
